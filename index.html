@@ -340,22 +340,52 @@ body{margin:0}
 }
 
 body{background:#15241F}
-.pt{aspect-ratio:1440 / 1900;background:#15241F;color:#EFEBE3}
-.pts{--u:min(1cqw, calc(100vh / 56.25));position:sticky;top:0;width:100%;height:min(56.25cqw, 100vh);overflow:hidden;background:#15241F}
+.pt{aspect-ratio:1440 / 2500;background:#15241F;color:#EFEBE3}
+.pts{--u:min(1cqw, calc(100vh / 56.25));position:sticky;top:0;width:100%;height:min(56.25cqw, 100vh);overflow:hidden;background:radial-gradient(ellipse 50% 70% at 66% 62%, #1C2F29 0%, #15241F 70%)}
 .ptv{position:absolute;top:0;left:calc(50% - 50 * var(--u));width:calc(100 * var(--u));height:calc(56.25 * var(--u))}
-.ptc{position:absolute}
-.ptw{margin:0;overflow:hidden;border:1px solid rgba(198,164,106,.55);transform-origin:0 0;will-change:transform;box-shadow:0 calc(1 * var(--u)) calc(2.4 * var(--u)) rgba(0,0,0,var(--sh,.18))}
-.ptw img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.4s cubic-bezier(.2,.8,.2,1)}
-.ptc:hover .ptw img{transform:scale(1.05)}
-.ptx{will-change:opacity,transform}
-.ptt{margin-top:calc(1.3 * var(--u)) !important}
-.ptt{margin:calc(.6 * var(--u)) 0 0;font-family:"TelAviv Brutalist Regular",sans-serif;font-weight:400;font-size:calc(1.3 * var(--u));line-height:1.1;letter-spacing:.02em;white-space:nowrap;color:#EFEBE3}
-.ptd{margin:calc(.7 * var(--u)) 0 0;font-size:calc(.95 * var(--u));line-height:1.5;color:rgba(239,235,227,.74)}
+/* index of the four types */
+.ptl{position:absolute;left:calc(7.8472 * var(--u));top:calc(17.6 * var(--u));width:calc(31 * var(--u));margin:0;padding:0;list-style:none;z-index:3}
+.ptr{border-top:1px solid rgba(198,164,106,.22)}
+.ptr:last-child{border-bottom:1px solid rgba(198,164,106,.22)}
+.ptb{all:unset;box-sizing:border-box;display:flex;align-items:baseline;gap:calc(1.4 * var(--u));width:100%;padding:calc(1.15 * var(--u)) 0;cursor:pointer}
+.ptb:focus-visible{outline:1px solid #C6A46A;outline-offset:4px}
+.ptn{min-width:calc(2 * var(--u));font-size:calc(.78 * var(--u));letter-spacing:.2em;color:rgba(239,235,227,.4);transition:color .5s}
+.ptt{margin:0;font-family:"TelAviv Brutalist Regular",sans-serif;font-weight:400;font-size:calc(2.3 * var(--u));line-height:1;letter-spacing:.02em;white-space:nowrap;color:transparent;-webkit-text-stroke:1px rgba(239,235,227,.36);transition:color .5s ease,-webkit-text-stroke-color .5s ease}
+.ptb:hover .ptt{-webkit-text-stroke-color:rgba(239,235,227,.8)}
+.ptar{margin-left:auto;font-size:calc(1.2 * var(--u));color:#C6A46A;opacity:0;transform:translateX(calc(-.8 * var(--u)));transition:opacity .5s,transform .6s cubic-bezier(.2,.8,.2,1)}
+.ptr.on .ptt{color:#E2C48F;-webkit-text-stroke-color:transparent}
+.ptr.on .ptn{color:#C6A46A}
+.ptr.on .ptar{opacity:1;transform:none}
+.ptdw{display:grid;grid-template-rows:0fr;transition:grid-template-rows .7s cubic-bezier(.2,.8,.2,1)}
+.ptr.on .ptdw{grid-template-rows:1fr}
+.ptdw > div{overflow:hidden}
+.ptd{margin:0;padding:0 0 calc(1.3 * var(--u)) calc(3.4 * var(--u));max-width:calc(27 * var(--u));font-size:calc(1 * var(--u));line-height:1.55;color:rgba(239,235,227,.76);opacity:0;transition:opacity .5s ease}
+.ptr.on .ptd{opacity:1;transition-delay:.15s}
+.ptmi{display:none}
+/* the elevation drawing: one arch that takes the proportions of each property */
+.ptg{position:absolute;left:calc(38.5 * var(--u));top:calc(25 * var(--u));width:calc(60 * var(--u));height:calc(8 * var(--u));overflow:hidden;text-align:center;pointer-events:none}
+.ptg-in{will-change:transform}
+.ptg i{display:block;height:calc(8 * var(--u));font-style:normal;font-family:"TelAviv Brutalist Regular",sans-serif;font-size:calc(5.2 * var(--u));line-height:calc(8 * var(--u));letter-spacing:.04em;color:transparent;-webkit-text-stroke:1px rgba(198,164,106,.24);white-space:nowrap}
+.ptf{position:absolute;overflow:hidden;border:1px solid rgba(198,164,106,.6);background:#0F1B17;box-shadow:0 calc(2 * var(--u)) calc(4 * var(--u)) calc(-1 * var(--u)) rgba(0,0,0,.55);z-index:2;will-change:left,top,width,height}
+.ptf img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;will-change:opacity,transform}
+.ptgl{position:absolute;left:calc(43 * var(--u));top:calc(50 * var(--u));width:calc(46 * var(--u));height:calc(.7 * var(--u));border-top:1px solid rgba(198,164,106,.7);background:repeating-linear-gradient(90deg,rgba(198,164,106,.45) 0 1px,transparent 1px calc(1 * var(--u)));-webkit-mask:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);z-index:1}
+.ptcap{position:absolute;top:calc(51.4 * var(--u));font-size:calc(.68 * var(--u));letter-spacing:.24em;color:rgba(198,164,106,.7);white-space:nowrap}
+.ptdim{position:absolute;width:1px;background:rgba(198,164,106,.55);z-index:2;will-change:left,top,height}
+.ptdim::before,.ptdim::after{content:"";position:absolute;left:calc(-.45 * var(--u));width:calc(.9 * var(--u));height:1px;background:rgba(198,164,106,.8)}
+.ptdim::before{top:0}.ptdim::after{bottom:0}
+.ptdl{position:absolute;left:calc(.9 * var(--u));top:50%;transform:translateY(-50%) rotate(-90deg);transform-origin:left center;margin-left:calc(.6 * var(--u));font-size:calc(.68 * var(--u));letter-spacing:.24em;color:#C6A46A;white-space:nowrap}
+.ptdl b{font-weight:400;color:rgba(239,235,227,.55)}
 @media (max-width:760px){
   .pt{aspect-ratio:auto} .pts{position:relative;height:auto;padding:16vw 6vw 12vw} .ptv{position:relative;left:auto;width:100%;height:auto;display:flex;flex-direction:column;gap:7vw}
   .ptv > *{position:relative !important;left:auto !important;top:auto !important;width:100% !important}
-  .ptw{height:96vw !important;transform:none !important} .ptx{opacity:1 !important;transform:none !important}
-  .lab,.ptn{font-size:3vw} .h2{font-size:9vw !important} .ptt{font-size:6vw;white-space:normal} .ptd,.para{font-size:4.2vw !important}
+  .ptg,.ptf,.ptgl,.ptcap,.ptdim{display:none !important}
+  .lab{font-size:3vw} .h2{font-size:9vw !important} .para{font-size:4.2vw !important;opacity:1 !important}
+  .ptl{display:flex;flex-direction:column;gap:9vw}
+  .ptr,.ptr:last-child{display:flex;flex-direction:column;border:0}
+  .ptmi{display:block;order:-1;width:100%;aspect-ratio:4 / 4.6;object-fit:cover;border:1px solid rgba(198,164,106,.6);border-radius:50% 50% 0 0 / 38% 38% 0 0;margin-bottom:4vw}
+  .ptb{gap:3vw;padding:0 0 2vw;cursor:default}
+  .ptn{font-size:3vw;min-width:6vw} .ptt{font-size:6vw;white-space:normal;color:#E2C48F;-webkit-text-stroke-color:transparent} .ptar{display:none}
+  .ptdw{grid-template-rows:1fr} .ptd{opacity:1;padding:0 0 0 9vw;max-width:none;font-size:4.2vw}
 }
 
 /* ---- Financial ---- */
@@ -877,7 +907,7 @@ body{background:#1E332E}
   </div>
 </section>
 </div></div>
-  <div class="dcw" style="aspect-ratio: 1440 / 1900"><div class="dcs" data-sec="PropertyTypes">
+  <div class="dcw" style="aspect-ratio: 1440 / 2500"><div class="dcs" data-sec="PropertyTypes">
 <section class="sx pt" id="property-types" aria-labelledby="pt-h">
   <div class="pts" id="pt-stage"><div class="ptv">
     <svg class="grid" aria-hidden="true" viewBox="0 0 1440 810" preserveAspectRatio="none"><g stroke="#EFEBE3" stroke-opacity="0.07" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"><path d="M180 0 V810"></path><path d="M360 0 V810"></path><path d="M540 0 V810"></path><path d="M720 0 V810"></path><path d="M900 0 V810"></path><path d="M1080 0 V810"></path><path d="M1260 0 V810"></path><path d="M0 162 H140 A40 40 0 0 0 180 122 M140 162 A40 40 0 0 1 180 202 M180 162 H320 A40 40 0 0 0 360 122 M320 162 A40 40 0 0 1 360 202 M360 162 H500 A40 40 0 0 0 540 122 M500 162 A40 40 0 0 1 540 202 M540 162 H680 A40 40 0 0 0 720 122 M680 162 A40 40 0 0 1 720 202 M720 162 H860 A40 40 0 0 0 900 122 M860 162 A40 40 0 0 1 900 202 M900 162 H1040 A40 40 0 0 0 1080 122 M1040 162 A40 40 0 0 1 1080 202 M1080 162 H1220 A40 40 0 0 0 1260 122 M1220 162 A40 40 0 0 1 1260 202 M1260 162 H1440"></path><path d="M0 324 H140 A40 40 0 0 0 180 284 M140 324 A40 40 0 0 1 180 364 M180 324 H320 A40 40 0 0 0 360 284 M320 324 A40 40 0 0 1 360 364 M360 324 H500 A40 40 0 0 0 540 284 M500 324 A40 40 0 0 1 540 364 M540 324 H680 A40 40 0 0 0 720 284 M680 324 A40 40 0 0 1 720 364 M720 324 H860 A40 40 0 0 0 900 284 M860 324 A40 40 0 0 1 900 364 M900 324 H1040 A40 40 0 0 0 1080 284 M1040 324 A40 40 0 0 1 1080 364 M1080 324 H1220 A40 40 0 0 0 1260 284 M1220 324 A40 40 0 0 1 1260 364 M1260 324 H1440"></path><path d="M0 486 H140 A40 40 0 0 0 180 446 M140 486 A40 40 0 0 1 180 526 M180 486 H320 A40 40 0 0 0 360 446 M320 486 A40 40 0 0 1 360 526 M360 486 H500 A40 40 0 0 0 540 446 M500 486 A40 40 0 0 1 540 526 M540 486 H680 A40 40 0 0 0 720 446 M680 486 A40 40 0 0 1 720 526 M720 486 H860 A40 40 0 0 0 900 446 M860 486 A40 40 0 0 1 900 526 M900 486 H1040 A40 40 0 0 0 1080 446 M1040 486 A40 40 0 0 1 1080 526 M1080 486 H1220 A40 40 0 0 0 1260 446 M1220 486 A40 40 0 0 1 1260 526 M1260 486 H1440"></path><path d="M0 648 H140 A40 40 0 0 0 180 608 M140 648 A40 40 0 0 1 180 688 M180 648 H320 A40 40 0 0 0 360 608 M320 648 A40 40 0 0 1 360 688 M360 648 H500 A40 40 0 0 0 540 608 M500 648 A40 40 0 0 1 540 688 M540 648 H680 A40 40 0 0 0 720 608 M680 648 A40 40 0 0 1 720 688 M720 648 H860 A40 40 0 0 0 900 608 M860 648 A40 40 0 0 1 900 688 M900 648 H1040 A40 40 0 0 0 1080 608 M1040 648 A40 40 0 0 1 1080 688 M1080 648 H1220 A40 40 0 0 0 1260 608 M1220 648 A40 40 0 0 1 1260 688 M1260 648 H1440"></path></g></svg>
@@ -885,22 +915,18 @@ body{background:#1E332E}
     <span class="lab" style="left:calc(7.8472 * var(--u));top:calc(5.4167 * var(--u));color:#C6A46A">05 — PROPERTY TYPES</span>
     <h2 id="pt-h" class="h2 gold" style="left:calc(7.6389 * var(--u));top:calc(7.6389 * var(--u));font-size:calc(3.4 * var(--u))">WHAT WE MANAGE</h2>
     <p class="para" id="pt-para" style="position:absolute;left:calc(57.5000 * var(--u));top:calc(7.2222 * var(--u));width:calc(34.7222 * var(--u));margin:0;font-size:calc(1.15 * var(--u));line-height:1.5;color:rgba(239,235,227,.82)">From towers with hundreds of residents to a single private home, each property gets the same standard of care.</p>
-      <article class="ptc" style="left:calc(7.8472 * var(--u));top:calc(16.3889 * var(--u));width:calc(18.1944 * var(--u))">
-        <figure class="ptw" id="ptw0" style="height:calc(22.0833 * var(--u));border-radius:calc(9.0972 * var(--u)) calc(9.0972 * var(--u)) 0 0"><img src="assets/982a5a6033.jpg" alt="Residential Towers"></figure>
-        <div class="ptx" id="ptx0"><h3 class="ptt">RESIDENTIAL TOWERS</h3><p class="ptd">Comprehensive management of high-rise residential towers, including daily operations, building systems and resident services.</p></div>
-      </article>
-      <article class="ptc" style="left:calc(29.7222 * var(--u));top:calc(19.4444 * var(--u));width:calc(18.1944 * var(--u))">
-        <figure class="ptw" id="ptw1" style="height:calc(22.0833 * var(--u));border-radius:calc(9.0972 * var(--u))"><img src="assets/7313e3e012.jpg" alt="Residential Buildings"></figure>
-        <div class="ptx" id="ptx1"><h3 class="ptt">RESIDENTIAL BUILDINGS</h3><p class="ptd">Dedicated management for boutique residential buildings, with close supervision of daily operations and maintenance.</p></div>
-      </article>
-      <article class="ptc" style="left:calc(51.5972 * var(--u));top:calc(16.3889 * var(--u));width:calc(18.1944 * var(--u))">
-        <figure class="ptw" id="ptw2" style="height:calc(22.0833 * var(--u));border-top-right-radius:calc(18.1944 * var(--u))"><img src="assets/e3744a5536.jpg" alt="Luxury Apartments"></figure>
-        <div class="ptx" id="ptx2"><h3 class="ptt">LUXURY APARTMENTS</h3><p class="ptd">Personalized property management, maintenance and preparation for owners, whether they are in Israel or abroad.</p></div>
-      </article>
-      <article class="ptc" style="left:calc(73.4722 * var(--u));top:calc(19.4444 * var(--u));width:calc(18.1944 * var(--u))">
-        <figure class="ptw" id="ptw3" style="height:calc(22.0833 * var(--u));border-top-left-radius:calc(18.1944 * var(--u));border-bottom-right-radius:calc(18.1944 * var(--u))"><img src="assets/98ef9e7e11.jpg" alt="Private Homes"></figure>
-        <div class="ptx" id="ptx3"><h3 class="ptt">PRIVATE HOMES</h3><p class="ptd">Tailored management of private homes and villas, with personal attention to every detail.</p></div>
-      </article>
+    <ol class="ptl" id="pt-list">
+      <li class="ptr on"><img class="ptmi" src="assets/982a5a6033.jpg" alt="" loading="lazy"><button type="button" class="ptb" data-i="0"><span class="ptn">01</span><h3 class="ptt">RESIDENTIAL TOWERS</h3><span class="ptar" aria-hidden="true">→</span></button><div class="ptdw"><div><p class="ptd">Comprehensive management of high-rise residential towers, including daily operations, building systems and resident services.</p></div></div></li>
+      <li class="ptr"><img class="ptmi" src="assets/7313e3e012.jpg" alt="" loading="lazy"><button type="button" class="ptb" data-i="1"><span class="ptn">02</span><h3 class="ptt">RESIDENTIAL BUILDINGS</h3><span class="ptar" aria-hidden="true">→</span></button><div class="ptdw"><div><p class="ptd">Dedicated management for boutique residential buildings, with close supervision of daily operations and maintenance.</p></div></div></li>
+      <li class="ptr"><img class="ptmi" src="assets/e3744a5536.jpg" alt="" loading="lazy"><button type="button" class="ptb" data-i="2"><span class="ptn">03</span><h3 class="ptt">LUXURY APARTMENTS</h3><span class="ptar" aria-hidden="true">→</span></button><div class="ptdw"><div><p class="ptd">Personalized property management, maintenance and preparation for owners, whether they are in Israel or abroad.</p></div></div></li>
+      <li class="ptr"><img class="ptmi" src="assets/98ef9e7e11.jpg" alt="" loading="lazy"><button type="button" class="ptb" data-i="3"><span class="ptn">04</span><h3 class="ptt">PRIVATE HOMES</h3><span class="ptar" aria-hidden="true">→</span></button><div class="ptdw"><div><p class="ptd">Tailored management of private homes and villas, with personal attention to every detail.</p></div></div></li>
+    </ol>
+    <div class="ptg" aria-hidden="true"><div class="ptg-in" id="pt-word"><i>TOWERS</i><i>BUILDINGS</i><i>APARTMENTS</i><i>HOMES</i></div></div>
+    <figure class="ptf" id="pt-frame" style="margin:0"><img src="assets/982a5a6033.jpg" alt="Residential tower managed by RAVITZ"><img src="assets/7313e3e012.jpg" alt="Boutique residential building"><img src="assets/e3744a5536.jpg" alt="Luxury apartment interior"><img src="assets/98ef9e7e11.jpg" alt="Private home with a pool"></figure>
+    <div class="ptgl" aria-hidden="true"></div>
+    <span class="ptcap" aria-hidden="true" style="left:calc(43 * var(--u))">±0.00 — ELEVATION</span>
+    <span class="ptcap" aria-hidden="true" style="left:auto;right:calc(11 * var(--u))">ONE STANDARD, EVERY SCALE</span>
+    <div class="ptdim" id="pt-dim" aria-hidden="true"><span class="ptdl" id="pt-dl"><b>H</b> — HIGH-RISE</span></div>
   </div></div>
 </section>
 </div></div>
@@ -1337,10 +1363,15 @@ DC.mount(document.querySelector('[data-sec="Projects"]'), Component);
 })();
 (function(){
 
-// One composition of the four shapes unfolds, with the scroll, into the four property types.
-const MOVES = [[393.4, -70.0], [296.0, -114.0], [-236.6, 192.4], [-334.0, 148.4]], S0 = 0.8, N = 4;
+// "From towers to a single home": one arch on a ground line takes the proportions of each property in turn,
+// like an architect's elevation, while the index on the left follows. Clicking a row scrolls to its stage.
+const N = 4, CXU = 66, GROUND = 50;
+const DIMS = [[17, 31], [22, 25.5], [30, 20], [38, 16.5]];          // width, height in --u
+const TAGS = ['HIGH-RISE', 'BOUTIQUE', 'INTERIOR', 'PRIVATE'];
 const ease = (t) => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
 const seg = (p, a, b) => Math.min(1, Math.max(0, (p - a) / (b - a)));
+const lerp = (a, b, t) => a + (b - a) * t;
+const P0 = .06, P1 = .94;
 class Component extends DCLogic {
   componentDidMount() {
     const sec = document.getElementById('property-types');
@@ -1348,6 +1379,14 @@ class Component extends DCLogic {
       const cs = getComputedStyle(n);
       if (/(hidden|auto|scroll)/.test(cs.overflowX + cs.overflowY) && n.scrollHeight <= n.clientHeight + 1) n.style.overflow = 'clip';
     }
+    this.idx = -1;
+    document.querySelectorAll('#pt-list .ptb').forEach((b) => b.addEventListener('click', () => {
+      if (window.innerWidth <= 760) return;
+      const stg = document.getElementById('pt-stage'), i = +b.dataset.i;
+      const room = sec.offsetHeight - stg.offsetHeight, p = P0 + (P1 - P0) * (i / (N - 1)) + (i < N - 1 ? .04 : 0);
+      const rm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: sec.getBoundingClientRect().top + window.scrollY + p * room, behavior: rm ? 'auto' : 'smooth' });
+    }));
     this.tick = () => { this.raf = 0; this.update(); };
     this.onScroll = () => { if (!this.raf) this.raf = requestAnimationFrame(this.tick); };
     document.addEventListener('scroll', this.onScroll, true);
@@ -1357,24 +1396,35 @@ class Component extends DCLogic {
   componentWillUnmount() { document.removeEventListener('scroll', this.onScroll, true); window.removeEventListener('resize', this.onScroll); cancelAnimationFrame(this.raf); }
   update() {
     const sec = document.getElementById('property-types'), stg = document.getElementById('pt-stage');
-    if (!sec || !stg) return;
-    const mob = window.innerWidth <= 760;
+    if (!sec || !stg || window.innerWidth <= 760) return;
     const r = sec.getBoundingClientRect(), room = Math.max(1, r.height - stg.getBoundingClientRect().height);
-    const p = mob ? 1 : Math.min(1, Math.max(0, -r.top / room));
-    const u = Math.min(sec.clientWidth / 1440, (window.innerHeight || 810) / 810);
-    for (let j = 0; j < N; j++) {
-      const w = document.getElementById('ptw' + j), x = document.getElementById('ptx' + j);
-      if (!w || !x) continue;
-      if (mob) { w.style.transform = ''; x.style.opacity = ''; x.style.transform = ''; continue; }
-      const e = ease(seg(p, .08 + j * .07, .62 + j * .07));
-      const k = 1 - e, s = S0 + (1 - S0) * e;
-      w.style.transform = 'translate3d(' + (MOVES[j][0] * k * u).toFixed(1) + 'px,' + (MOVES[j][1] * k * u).toFixed(1) + 'px,0) scale(' + s.toFixed(4) + ')';
-      w.style.setProperty('--sh', (.18 + .22 * Math.sin(Math.PI * e)).toFixed(3));
-      const t = seg(e, .55, 1);
-      x.style.opacity = t.toFixed(3);
-      x.style.transform = 'translateY(' + ((1 - t) * 18 * u).toFixed(1) + 'px)';
+    const p = Math.min(1, Math.max(0, -r.top / room));
+    // hold on each type, then change shape
+    const x = seg(p, P0, P1) * (N - 1), k = Math.min(N - 1, Math.floor(x));
+    const s = k >= N - 1 ? N - 1 : k + ease(seg(x - k, .45, 1));
+    const a = Math.floor(s), b = Math.min(N - 1, a + 1), t = s - a;
+    const w = lerp(DIMS[a][0], DIMS[b][0], t), h = lerp(DIMS[a][1], DIMS[b][1], t), rv = Math.min(w / 2, h * .8);
+    const U = (v) => 'calc(' + v.toFixed(3) + ' * var(--u))';
+    const f = document.getElementById('pt-frame');
+    if (f) {
+      f.style.left = U(CXU - w / 2); f.style.top = U(GROUND - h); f.style.width = U(w); f.style.height = U(h);
+      f.style.borderRadius = U(w / 2) + ' ' + U(w / 2) + ' 0 0 / ' + U(rv) + ' ' + U(rv) + ' 0 0';
+      f.querySelectorAll('img').forEach((im, i) => {
+        const o = Math.max(0, 1 - Math.abs(s - i));
+        im.style.opacity = o.toFixed(3);
+        im.style.transform = 'scale(' + (1 + .08 * (1 - o)).toFixed(4) + ')';
+      });
     }
-    const para = document.getElementById('pt-para'); if (para) para.style.opacity = (mob ? 1 : .35 + .65 * seg(p, .5, .9)).toFixed(3);
+    const d = document.getElementById('pt-dim');
+    if (d) { d.style.left = U(CXU + w / 2 + 2.2); d.style.top = U(GROUND - h); d.style.height = U(h); }
+    const wd = document.getElementById('pt-word'); if (wd) wd.style.transform = 'translateY(' + (-s * 100 / N).toFixed(3) + '%)';
+    const idx = Math.round(s);
+    if (idx !== this.idx) {
+      this.idx = idx;
+      document.querySelectorAll('#pt-list .ptr').forEach((el, i) => el.classList.toggle('on', i === idx));
+      const dl = document.getElementById('pt-dl'); if (dl) dl.innerHTML = '<b>H</b> — ' + TAGS[idx];
+    }
+    const para = document.getElementById('pt-para'); if (para) para.style.opacity = (.45 + .55 * seg(p, 0, .2)).toFixed(3);
   }
   renderVals() { return {}; }
 }
