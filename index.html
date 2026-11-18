@@ -228,10 +228,13 @@ a{color:#F4F2EC}a:hover{color:#C6A46A}
   .sec2{position:relative;left:auto;bottom:auto;margin:6vw 6vw 0;flex-direction:column;gap:1.5vw;font-size:3.8vw} .s2t{font-size:4.2vw}
   .hd{position:relative;left:auto;top:auto;margin:0 6vw;font-size:11vw}
   .sub{position:relative;left:auto;top:auto;margin:3vw 6vw 0;font-size:2.8vw}
-  .track{position:relative;left:auto;width:auto;height:auto;transform:none !important;display:flex;gap:4vw;overflow-x:auto;scroll-snap-type:x mandatory;padding:16vw 6vw 2vw;-webkit-overflow-scrolling:touch}
-  .pn{position:relative;left:auto !important;top:auto !important;flex:0 0 80vw;height:118vw;scroll-snap-align:start}
+  /* phones: the four cards stack on top of each other as you scroll */
+  .track{position:relative;left:auto;width:auto;height:auto;transform:none !important;display:flex;flex-direction:column;gap:8vw;overflow:visible;padding:10vw 6vw 4vw}
+  .pn{position:sticky;left:auto !important;top:calc(84px + var(--i, 0) * 12px) !important;flex:none;width:auto;height:118vw;max-height:calc(100vh - 110px);max-height:calc(100svh - 110px)}
+  .pn:nth-child(2){--i:1} .pn:nth-child(3){--i:2} .pn:nth-child(4){--i:3}
   .pn + .pn{margin-left:0}
-  .nm{top:-11vw;height:20vw;font-size:20vw} .nm span{transform:none !important}
+  .fr{transform-origin:50% 0}
+  .nm{top:3vw;right:4vw;height:15vw;font-size:15vw;z-index:2;color:#F4F2EC;text-shadow:0 2px 14px rgba(0,0,0,.35)} .nm span{transform:none !important}
   .ph img{transform:none !important}
   .tt{font-size:5.4vw} .ds{font-size:3.8vw;max-width:none} .ar{width:11vw}
   .tx{padding:5vw 6vw !important}
@@ -363,6 +366,10 @@ body{background:#15241F}
   .pt{aspect-ratio:auto} .pts{position:relative;height:auto;padding:16vw 6vw 12vw} .ptv{position:relative;left:auto;width:100%;height:auto;display:flex;flex-direction:column;gap:7vw}
   .ptv > *{position:relative !important;left:auto !important;top:auto !important;width:100% !important}
   .ptw{height:96vw !important;transform:none !important} .ptx{opacity:1 !important;transform:none !important}
+  /* phones: each property card slides up over the previous one */
+  .pts{overflow:visible}
+  .ptv > .ptc{position:sticky !important;top:calc(84px + var(--i, 0) * 12px) !important;background:#15241F;padding-bottom:6vw;transform-origin:50% 0}
+  .ptc:nth-of-type(2){--i:1} .ptc:nth-of-type(3){--i:2} .ptc:nth-of-type(4){--i:3}
   .lab,.ptn{font-size:3vw} .h2{font-size:9vw !important} .ptt{font-size:6vw;white-space:normal} .ptd,.para{font-size:4.2vw !important}
 }
 
@@ -443,17 +450,33 @@ body{background:#EFEBE3}
 .fcend b{display:block;font-family:"TelAviv Brutalist Regular",sans-serif;font-weight:400;font-size:calc(.82 * var(--u));letter-spacing:.14em;color:#9A7638}
 .fcend span{display:block;margin-top:calc(.35 * var(--u));font-size:calc(.85 * var(--u));color:rgba(30,51,46,.72)}
 @media (prefers-reduced-motion: reduce){.fco img,.fchead{animation:none}.fci{transition:none}}
+/* phones: the same dial, pinned and turned by the scroll; heading on top, dial in the middle, stage readout below */
 @media (max-width:760px){
-  .fc{aspect-ratio:auto} .fcs{position:relative;height:auto;padding:16vw 6vw 12vw}
-  .fcv{position:relative;left:auto;width:100%;height:auto;display:flex;flex-direction:column;gap:5vw}
-  .fcv > *{position:relative !important;left:auto !important;top:auto !important;width:100% !important;text-align:left !important;opacity:1 !important}
-  .grid,.spark,.fcd,.fcend,.fcr{display:none !important}
-  .fch .lab{font-size:3vw} .fch h2{font-size:10vw} .fch p{font-size:4.2vw;max-width:none}
-  .fch h2 .ln > span{transform:none !important}
-  .fco{width:34vw !important;height:34vw !important;--a:1 !important;transform:none !important;margin-top:4vw}
-  .fcl{height:auto;overflow:visible;clip-path:none;white-space:normal;padding:0 0 0 6vw;border-left:1px solid #C6A46A}
-  .fcl h3{margin:0;font-family:"TelAviv Brutalist Regular",sans-serif;font-weight:400;font-size:5vw;letter-spacing:.06em;color:#1E332E} .fcl p{margin:1.5vw 0 0;font-size:4vw;line-height:1.5;color:rgba(30,51,46,.74)}
+  .fc{aspect-ratio:auto;height:460vh;height:460svh}
+  #peace-of-mind > .fcs{position:sticky !important;top:0 !important;width:100% !important;height:100vh;height:100svh;padding:0}
+  .fcv{position:relative;left:auto;width:100%;height:100%;display:flex;flex-direction:column;padding:calc(22px + env(safe-area-inset-top)) 6vw 0;box-sizing:border-box}
+  .grid,.spark,.fcpl{display:none !important}
+  .fch{position:relative;left:auto;top:auto;width:auto;padding-right:76px;flex:none}
+  .fch .lab{font-size:2.9vw}
+  .fch h2{margin-top:2.2vw;font-size:7.4vw}
+  .fch p{margin-top:2.4vw;max-width:none;font-size:3.6vw;line-height:1.45}
+  .fcd{position:relative;inset:auto;order:1;flex:1 1 0;min-height:0;width:100%;height:auto;margin:2vw 0}
+  .fcr{position:relative;left:auto;top:auto;order:2;width:auto;flex:none;margin:0 0 calc(84px + env(safe-area-inset-bottom))}
+  .fcrt{gap:3vw}
+  .fcnum,.fcnum i{height:12vw}
+  .fcnum i{font-size:12.4vw;-webkit-text-stroke-width:1px}
+  .fcof{padding-bottom:1.6vw;font-size:2.6vw}
+  .fcst{height:21vw;margin-top:2.2vw}
+  .fci{transform:translateY(10px)} .fci.past{transform:translateY(-10px)} .fci.on{transform:none}
+  .fci h3{font-size:5.4vw}
+  .fci p{margin-top:1.4vw;max-width:none;font-size:3.7vw}
+  .fcbar{gap:2vw;margin-top:2vw}
+  .fcb em{margin-top:1.6vw;font-size:2.4vw}
+  .fco{width:auto;height:auto}
+  .fcend{width:40vw;transform:translate(-50%, calc(-50% + (1 - var(--e,0)) * 6px))}
+  .fcend b{font-size:2.6vw} .fcend span{margin-top:1vw;font-size:2.8vw}
 }
+@media (max-width:760px) and (max-height:720px){ .fch p{display:none} }
 
 /* ---- Testimonials ---- */
 
@@ -1394,6 +1417,7 @@ DC.mount(document.querySelector('[data-sec="PropertyTypes"]'), Component);
 // One clear cycle, read as a dial: the wheel turns a quarter per stage and holds each stage at the gold focus point
 // facing the text; after REPORTS it closes the full circle and the R mark draws itself in.
 const CX = 985, CY = 418, RR = 250, N = 4, FOCUS = 270, VB = 14.4;
+const MV = [612, 45, 746, 746], MSIZE = 136;               // phone viewBox: a square around the dial, with room for the active object
 const seg = (p, a, b) => Math.min(1, Math.max(0, (p - a) / (b - a)));
 const ease = (x) => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
 class Component extends DCLogic {
@@ -1423,7 +1447,26 @@ class Component extends DCLogic {
   componentWillUnmount() { document.removeEventListener('scroll', this.onScroll, true); window.removeEventListener('resize', this.onScroll); cancelAnimationFrame(this.raf); }
   update() {
     const sec = document.getElementById('peace-of-mind'), stg = document.getElementById('fc-stage');
-    if (!sec || !stg || window.innerWidth <= 760) return;
+    if (!sec || !stg) return;
+    // phones show only the dial, cropped square; desktop shows the full 1440x810 drawing
+    const mob = window.innerWidth <= 760, svg = sec.querySelector('.fcd'), view = document.getElementById('fc-v');
+    if (mob !== this.mob) {
+      this.mob = mob;
+      if (svg) svg.setAttribute('viewBox', mob ? MV.join(' ') : '0 0 1440 810');
+      if (!mob) {
+        for (let i = 0; i < N; i++) { const o = document.getElementById('fco' + i); if (o) { o.style.width = ''; o.style.height = ''; } }
+        const en = document.getElementById('fc-end'); if (en) { en.style.left = ''; en.style.top = ''; }
+      }
+    }
+    let place;                                         // maps a drawing point to a CSS position inside .fcv
+    if (mob && svg && view) {
+      const sr = svg.getBoundingClientRect(), vr = view.getBoundingClientRect(), side = Math.min(sr.width, sr.height), k = side / MV[2];
+      const ox = sr.left - vr.left + (sr.width - side) / 2, oy = sr.top - vr.top + (sr.height - side) / 2;
+      place = { x: (vx) => (ox + (vx - MV[0]) * k).toFixed(1) + 'px', y: (vy) => (oy + (vy - MV[1]) * k).toFixed(1) + 'px', size: (MSIZE * k).toFixed(1) + 'px' };
+      const en = document.getElementById('fc-end'); if (en) { en.style.left = place.x(CX); en.style.top = place.y(CY + 52); }
+    } else {
+      place = { x: (vx) => 'calc(' + (vx / VB).toFixed(3) + ' * var(--u))', y: (vy) => 'calc(' + (vy / VB).toFixed(3) + ' * var(--u))', size: '' };
+    }
     const vh = window.innerHeight, r = sec.getBoundingClientRect(), room = Math.max(1, r.height - stg.getBoundingClientRect().height);
     const p = Math.min(1, Math.max(0, -r.top / room));
 
@@ -1443,8 +1486,9 @@ class Component extends DCLogic {
       const d = Math.abs(((ang - FOCUS) % 360 + 540) % 360 - 180), a = 1 - Math.min(1, d / 90);
       const o = document.getElementById('fco' + i);
       if (o) {
-        o.style.left = 'calc(' + ((CX + RR * Math.sin(rad)) / VB).toFixed(3) + ' * var(--u))';
-        o.style.top = 'calc(' + ((CY - RR * Math.cos(rad)) / VB).toFixed(3) + ' * var(--u))';
+        o.style.left = place.x(CX + RR * Math.sin(rad));
+        o.style.top = place.y(CY - RR * Math.cos(rad));
+        if (place.size) { o.style.width = place.size; o.style.height = place.size; }
         o.style.setProperty('--a', a.toFixed(3)); o.style.zIndex = 1 + Math.round(a * 10);
       }
     }
@@ -1468,6 +1512,30 @@ class Component extends DCLogic {
 }
 
 DC.mount(document.querySelector('[data-sec="Financial"]'), Component);
+})();
+(function(){
+// Phones: stacked cards (services, property types). A card that is being covered by the next one sinks back a little.
+const groups = () => [[document.querySelectorAll('#ex-track .pn'), '.fr'], [document.querySelectorAll('#property-types .ptc'), null]];
+let raf = 0;
+const run = () => {
+  raf = 0;
+  const mob = window.innerWidth <= 760;
+  groups().forEach(([cards, inner]) => cards.forEach((c, i) => {
+    const t = inner ? c.querySelector(inner) : c;
+    if (!t) return;
+    let k = 0;
+    if (mob && cards[i + 1]) {
+      const r = c.getBoundingClientRect(), n = cards[i + 1].getBoundingClientRect();
+      k = Math.min(1, Math.max(0, (r.bottom - n.top) / r.height));
+    }
+    t.style.transform = k ? 'scale(' + (1 - .07 * k).toFixed(4) + ')' : '';
+    t.style.filter = k ? 'brightness(' + (1 - .4 * k).toFixed(3) + ')' : '';
+  }));
+};
+const on = () => { if (!raf) raf = requestAnimationFrame(run); };
+document.addEventListener('scroll', on, true);
+window.addEventListener('resize', on);
+window.addEventListener('load', run);
 })();
 (function(){
 
