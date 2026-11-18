@@ -1,0 +1,5 @@
+# local tools (preview server) and local backups
+.claude/
+*.backup*.html
+Thumbs.db
+desktop.ini
