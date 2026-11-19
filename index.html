@@ -306,6 +306,9 @@ body{background:#1E332E}
 .pjbar .pill{position:static;color:#9A7638;border-color:rgba(154,118,56,.7);gap:calc(.8 * var(--u));padding:calc(1 * var(--u)) calc(2.2 * var(--u)) calc(1 * var(--u)) calc(1.6 * var(--u));font-size:calc(.78 * var(--u));white-space:nowrap}
 .pjbar .pill span{color:#9A7638}
 .pjbar .pill:hover{background:#9A7638;color:#EFEBE3}
+.pjbar button.pill{background:transparent;font-family:inherit;line-height:inherit;cursor:pointer}
+.pjbar .pill:hover span{color:#EFEBE3}
+.pjbar .pill:focus-visible{outline:1px solid #9A7638;outline-offset:4px}
 .sr-only{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .pjnav{display:flex;align-items:center;gap:calc(0.8333 * var(--u));width:calc(20.8333 * var(--u))}
 .pjar{width:calc(3.0556 * var(--u));height:calc(3.0556 * var(--u));border-radius:50%;border:1px solid rgba(154,118,56,.7);background:none;color:#9A7638;font-size:calc(1.1 * var(--u));line-height:1;cursor:pointer;display:grid;place-items:center;transition:background .4s,color .4s,border-color .4s}
@@ -901,7 +904,7 @@ body{background:#1E332E}
         <div class="pjpan" id="pj-pan"><div class="pjk" id="pjk0" role="img" aria-label="Spirit Tower"><figure class="pjp pjp0" data-k="0" style="width:calc(9.7222 * var(--u));margin-left:calc(-4.8611 * var(--u))"><img src="assets/462efcde70.jpg" alt="" loading="lazy" decoding="async"></figure><figure class="pjp pjp1" data-k="1" style="width:calc(12.6389 * var(--u));margin-left:calc(-6.3194 * var(--u))"><img src="assets/32d7dc1e7c.jpg" alt="" loading="lazy" decoding="async"></figure><figure class="pjp pjp2" data-k="2" style="width:calc(19.5833 * var(--u));margin-left:calc(-9.7917 * var(--u))"><img src="assets/9f012a7b44.jpg" alt="" loading="lazy" decoding="async"><span class="pjsig" aria-hidden="true"><svg viewBox="-3 -3 527 398"><path d="M11 0 H396 A125 104 0 0 1 400 208 H307 Z"></path><path d="M0 22 V392 H193 V294 L287 223 Z"></path><path d="M213 307 L280 392 H498 L365 228 H313 Z"></path></svg></span></figure><figure class="pjp pjp3" data-k="3" style="width:calc(12.6389 * var(--u));margin-left:calc(-6.3194 * var(--u))"><img src="assets/285d30cba2.jpg" alt="" loading="lazy" decoding="async"></figure><figure class="pjp pjp4" data-k="4" style="width:calc(9.7222 * var(--u));margin-left:calc(-4.8611 * var(--u))"><img src="assets/5ece153839.jpg" alt="" loading="lazy" decoding="async"></figure></div><div class="pjk" id="pjk1" role="img" aria-label="Residence I"><figure class="pjp pjp0" data-k="0" style="width:calc(9.7222 * var(--u));margin-left:calc(-4.8611 * var(--u))"><img src="assets/3ba6d0a569.jpg" alt="" loading="lazy" decoding="async"></figure><figure class="pjp pjp1" data-k="1" style="width:calc(12.6389 * var(--u));margin-left:calc(-6.3194 * var(--u))"><img src="assets/4fbcbb2295.jpg" alt="" loading="lazy" decoding="async"></figure><figure class="pjp pjp2" data-k="2" style="width:calc(19.5833 * var(--u));margin-left:calc(-9.7917 * var(--u))"><img src="assets/e3744a5536.jpg" alt="" loading="lazy" decoding="async"><span class="pjsig" aria-hidden="true"><svg viewBox="-3 -3 527 398"><path d="M11 0 H396 A125 104 0 0 1 400 208 H307 Z"></path><path d="M0 22 V392 H193 V294 L287 223 Z"></path><path d="M213 307 L280 392 H498 L365 228 H313 Z"></path></svg></span></figure><figure class="pjp pjp3" data-k="3" style="width:calc(12.6389 * var(--u));margin-left:calc(-6.3194 * var(--u))"><img src="assets/5bdbfda8f5.jpg" alt="" loading="lazy" decoding="async"></figure><figure class="pjp pjp4" data-k="4" style="width:calc(9.7222 * var(--u));margin-left:calc(-4.8611 * var(--u))"><img src="assets/d7fccf2d9b.jpg" alt="" loading="lazy" decoding="async"></figure></div><div class="pjk" id="pjk2" role="img" aria-label="Residence II"><figure class="pjp pjp0" data-k="0" style="width:calc(9.7222 * var(--u));margin-left:calc(-4.8611 * var(--u))"><img src="assets/03a466dbc3.jpg" alt="" loading="lazy" decoding="async"></figure><figure class="pjp pjp1" data-k="1" style="width:calc(12.6389 * var(--u));margin-left:calc(-6.3194 * var(--u))"><img src="assets/e8598d8187.jpg" alt="" loading="lazy" decoding="async"></figure><figure class="pjp pjp2" data-k="2" style="width:calc(19.5833 * var(--u));margin-left:calc(-9.7917 * var(--u))"><img src="assets/8123896cd7.jpg" alt="" loading="lazy" decoding="async"><span class="pjsig" aria-hidden="true"><svg viewBox="-3 -3 527 398"><path d="M11 0 H396 A125 104 0 0 1 400 208 H307 Z"></path><path d="M0 22 V392 H193 V294 L287 223 Z"></path><path d="M213 307 L280 392 H498 L365 228 H313 Z"></path></svg></span></figure><figure class="pjp pjp3" data-k="3" style="width:calc(12.6389 * var(--u));margin-left:calc(-6.3194 * var(--u))"><img src="assets/5863287414.jpg" alt="" loading="lazy" decoding="async"></figure><figure class="pjp pjp4" data-k="4" style="width:calc(9.7222 * var(--u));margin-left:calc(-4.8611 * var(--u))"><img src="assets/065e44dac6.jpg" alt="" loading="lazy" decoding="async"></figure></div><div class="pjk" id="pjk3" role="img" aria-label="Residence III"><figure class="pjp pjp0" data-k="0" style="width:calc(9.7222 * var(--u));margin-left:calc(-4.8611 * var(--u))"><img src="assets/41d731b8d6.jpg" alt="" loading="lazy" decoding="async"></figure><figure class="pjp pjp1" data-k="1" style="width:calc(12.6389 * var(--u));margin-left:calc(-6.3194 * var(--u))"><img src="assets/e67757fec0.jpg" alt="" loading="lazy" decoding="async"></figure><figure class="pjp pjp2" data-k="2" style="width:calc(19.5833 * var(--u));margin-left:calc(-9.7917 * var(--u))"><img src="assets/b40ccc2baa.jpg" alt="" loading="lazy" decoding="async"><span class="pjsig" aria-hidden="true"><svg viewBox="-3 -3 527 398"><path d="M11 0 H396 A125 104 0 0 1 400 208 H307 Z"></path><path d="M0 22 V392 H193 V294 L287 223 Z"></path><path d="M213 307 L280 392 H498 L365 228 H313 Z"></path></svg></span></figure><figure class="pjp pjp3" data-k="3" style="width:calc(12.6389 * var(--u));margin-left:calc(-6.3194 * var(--u))"><img src="assets/7fdcee70aa.jpg" alt="" loading="lazy" decoding="async"></figure><figure class="pjp pjp4" data-k="4" style="width:calc(9.7222 * var(--u));margin-left:calc(-4.8611 * var(--u))"><img src="assets/ae3c6ec316.jpg" alt="" loading="lazy" decoding="async"></figure></div></div>
         <div class="pjbar">
           <div class="curs"><div class="cur" id="pjt0"><span class="cn">01 <i>/ 04</i></span><h3 class="cnm"><span class="mk"><span>SPIRIT <em>TOWER</em></span></span></h3><span class="cm">JERUSALEM · RESIDENTIAL TOWER</span></div><div class="cur" id="pjt1"><span class="cn">02 <i>/ 04</i></span><h3 class="cnm"><span class="mk"><span>RESIDENCE <em>I</em></span></span></h3><span class="cm">PRIVATE RESIDENCE</span></div><div class="cur" id="pjt2"><span class="cn">03 <i>/ 04</i></span><h3 class="cnm"><span class="mk"><span>RESIDENCE <em>II</em></span></span></h3><span class="cm">PRIVATE RESIDENCE</span></div><div class="cur" id="pjt3"><span class="cn">04 <i>/ 04</i></span><h3 class="cnm"><span class="mk"><span>RESIDENCE <em>III</em></span></span></h3><span class="cm">PRIVATE RESIDENCE</span></div></div><span class="sr-only" id="pj-live" aria-live="polite"></span>
-          <div class="pjact"><a class="pill" href="#contact">VIEW THE PROJECT <span aria-hidden="true">→</span></a>
+          <div class="pjact"><button class="pill" id="pj-view" type="button" aria-haspopup="dialog" aria-controls="pjg">VIEW THE PROJECT <span aria-hidden="true">→</span></button>
             <div class="pjnav"><button class="pjar" id="pj-prev" type="button" aria-label="Previous project">←</button><button class="pjar" id="pj-next" type="button" aria-label="Next project">→</button><span class="pjpr"><i id="pjb0"><b></b></i><i id="pjb1"><b></b></i><i id="pjb2"><b></b></i><i id="pjb3"><b></b></i></span></div></div>
         </div>
       </div>
@@ -1273,7 +1276,12 @@ class Component extends DCLogic {
     const pv = document.getElementById('pj-prev'), nx = document.getElementById('pj-next');
     if (pv) pv.onclick = () => go(-1);
     if (nx) nx.onclick = () => go(1);
-    const loop = () => { this.scene(); this.raf = requestAnimationFrame(loop); };
+    const pjSec = document.getElementById('projects');
+    const loop = () => {
+      this.scene();
+      if (pjSec) pjSec.dataset.pj = Math.round(window.innerWidth <= 760 ? this.mpos : this.pos);   // read by the project gallery
+      this.raf = requestAnimationFrame(loop);
+    };
     this.raf = requestAnimationFrame(loop);
   }
   componentWillUnmount() { cancelAnimationFrame(this.raf); }
@@ -1636,6 +1644,173 @@ class Component extends DCLogic {
 }
 
 DC.mount(document.querySelector('[data-sec="Contact"]'), Component);
+})();
+</script>
+<!-- PROJECT GALLERY: opens from "View the project" and lets visitors browse each project's photos -->
+<style>
+.pjg{position:fixed;inset:0;z-index:980;display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:auto minmax(0,1fr) auto;background:rgba(12,22,19,.97);color:#EFEBE3;font-family:"NewFont",sans-serif;opacity:0;visibility:hidden;transition:opacity .45s ease,visibility 0s linear .45s}
+.pjg.on{opacity:1;visibility:visible;transition:opacity .45s ease,visibility 0s}
+@supports (backdrop-filter:blur(8px)){.pjg{background:rgba(12,22,19,.9);backdrop-filter:blur(14px)}}
+.pjg *{box-sizing:border-box}
+.pjg-top{display:flex;align-items:center;gap:28px;padding:22px 32px 14px}
+.pjg-id{display:flex;align-items:baseline;gap:16px;min-width:0}
+.pjg-n{font-size:12px;letter-spacing:.22em;color:#C6A46A;white-space:nowrap}
+.pjg-t{margin:0;font-family:"TelAviv Brutalist Regular",sans-serif;font-weight:400;font-size:clamp(20px,2vw,30px);letter-spacing:.03em;white-space:nowrap;background:linear-gradient(90deg,#C2925F,#FDE6AA 50%,#C98F5E);-webkit-background-clip:text;background-clip:text;color:transparent}
+.pjg-tabs{display:flex;gap:6px;margin-left:auto}
+.pjg-tab{all:unset;cursor:pointer;padding:9px 14px;border:1px solid rgba(198,164,106,.28);border-radius:999px;font-size:11px;letter-spacing:.18em;color:rgba(239,235,227,.62);transition:border-color .3s,color .3s,background .3s}
+.pjg-tab:hover{border-color:rgba(198,164,106,.8);color:#EFEBE3}
+.pjg-tab[aria-selected="true"]{background:#C6A46A;border-color:#C6A46A;color:#14231E}
+.pjg-x{all:unset;cursor:pointer;flex:none;display:grid;place-items:center;width:48px;height:48px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(198,164,106,.6);font-size:22px;line-height:1;color:#EFEBE3;transition:background .3s,transform .4s cubic-bezier(.2,.8,.2,1)}
+.pjg-x:hover{background:rgba(198,164,106,.16);transform:rotate(90deg)}
+.pjg-stage{position:relative;min-height:0;display:grid;grid-template-columns:96px minmax(0,1fr) 96px;align-items:center}
+.pjg-fig{position:relative;margin:0;height:100%;min-height:0;overflow:hidden;touch-action:pan-y;user-select:none}
+.pjg-fig img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 26px 40px rgba(0,0,0,.55));opacity:0;transform:scale(1.025);transition:opacity .55s ease,transform .9s cubic-bezier(.2,.8,.2,1)}
+.pjg-fig img.on{opacity:1;transform:none}
+.pjg-ar{all:unset;cursor:pointer;justify-self:center;display:grid;place-items:center;width:58px;height:58px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(198,164,106,.6);font-size:20px;color:#C6A46A;transition:background .3s,color .3s}
+.pjg-ar:hover{background:#C6A46A;color:#14231E}
+.pjg-ar:disabled{opacity:.25;cursor:default;background:none;color:#C6A46A}
+.pjg-x:focus-visible,.pjg-ar:focus-visible,.pjg-tab:focus-visible,.pjg-th:focus-visible{outline:1px solid #C6A46A;outline-offset:4px}
+.pjg-bot{display:flex;align-items:center;gap:24px;padding:14px 32px 22px}
+.pjg-c{flex:none;min-width:72px;font-family:"TelAviv Brutalist Regular",sans-serif;font-size:15px;letter-spacing:.06em;color:#EFEBE3}
+.pjg-c i{font-style:normal;color:rgba(239,235,227,.45)}
+.pjg-strip{flex:1;min-width:0;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:4px 2px;scroll-behavior:smooth}
+.pjg-strip::-webkit-scrollbar{display:none}
+.pjg-th{all:unset;cursor:pointer;flex:none;width:86px;height:58px;border-radius:2px;overflow:hidden;opacity:.42;box-shadow:inset 0 0 0 1px transparent;transition:opacity .3s,box-shadow .3s}
+.pjg-th img{display:block;width:100%;height:100%;object-fit:cover}
+.pjg-th:hover{opacity:.85}
+.pjg-th[aria-current="true"]{opacity:1;box-shadow:0 0 0 1.5px #C6A46A}
+.pjg-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@media (max-width:760px){
+  .pjg{grid-template-rows:auto minmax(0,1fr) auto auto}
+  .pjg-top{flex-wrap:wrap;gap:10px 14px;padding:calc(16px + env(safe-area-inset-top)) 16px 10px}
+  .pjg-id{flex:1;flex-direction:column;gap:4px}
+  .pjg-x{width:44px;height:44px;order:2}
+  .pjg-tabs{order:3;width:100%;margin:0;overflow-x:auto;scrollbar-width:none}
+  .pjg-tabs::-webkit-scrollbar{display:none}
+  .pjg-tab{flex:none;padding:8px 12px;font-size:10px}
+  .pjg-stage{grid-template-columns:1fr;padding:0 12px}
+  .pjg-stage .pjg-ar{display:none}
+  .pjg-bot{padding:10px 16px calc(16px + env(safe-area-inset-bottom));gap:14px}
+  .pjg-th{width:64px;height:44px}
+  .pjg-nav{display:flex;justify-content:center;gap:16px;padding:4px 0 2px}
+}
+@media (min-width:761px){ .pjg-nav{display:none} }
+@media (prefers-reduced-motion: reduce){ .pjg,.pjg-fig img{transition:none} }
+</style>
+<div class="pjg" id="pjg" role="dialog" aria-modal="true" aria-labelledby="pjg-t" aria-hidden="true">
+  <div class="pjg-top">
+    <div class="pjg-id"><span class="pjg-n" id="pjg-n">01 / 04</span><h2 class="pjg-t" id="pjg-t">SPIRIT TOWER</h2></div>
+    <div class="pjg-tabs" role="tablist" aria-label="Projects" id="pjg-tabs"></div>
+    <button class="pjg-x" id="pjg-x" type="button" aria-label="Close gallery">×</button>
+  </div>
+  <div class="pjg-stage">
+    <button class="pjg-ar" id="pjg-prev" type="button" aria-label="Previous photo">←</button>
+    <figure class="pjg-fig" id="pjg-fig"></figure>
+    <button class="pjg-ar" id="pjg-next" type="button" aria-label="Next photo">→</button>
+  </div>
+  <div class="pjg-nav"><button class="pjg-ar" id="pjg-prev2" type="button" aria-label="Previous photo">←</button><button class="pjg-ar" id="pjg-next2" type="button" aria-label="Next photo">→</button></div>
+  <div class="pjg-bot">
+    <span class="pjg-c" id="pjg-c" aria-hidden="true">01 <i>/ 17</i></span>
+    <div class="pjg-strip" id="pjg-strip"></div>
+  </div>
+  <p class="pjg-sr" id="pjg-live" aria-live="polite"></p>
+</div>
+<script>
+(function(){
+  const P = [
+    { name: 'SPIRIT TOWER', tab: 'SPIRIT TOWER', key: 'spirit', n: 17, alt: ['Spirit Tower at dusk', 'Spirit Tower over Jerusalem at night', 'Aerial view of Spirit Tower', 'Spirit Tower seen from the park', 'Spirit Tower at sunset', 'Spirit Tower, front elevation', 'Residents’ lounge in the lobby', 'Lobby with arched niches', 'Reception desk', 'Elevator lobby', 'Arched residential corridor', 'Library lounge', 'Billiards room', 'Fitness room', 'Games room', 'Children’s playroom', 'Set table in the lobby'] },
+    { name: 'RESIDENCE I', tab: 'RESIDENCE I', key: 'res1', n: 9 },
+    { name: 'RESIDENCE II', tab: 'RESIDENCE II', key: 'res2', n: 5 },
+    { name: 'RESIDENCE III', tab: 'RESIDENCE III', key: 'res3', n: 9, skip: [7] }
+  ];
+  P.forEach((p) => {
+    p.files = [];
+    for (let i = 1; i <= p.n; i++) if (!(p.skip || []).includes(i)) p.files.push(String(i).padStart(2, '0'));
+  });
+  const $ = (id) => document.getElementById(id);
+  const box = $('pjg'), fig = $('pjg-fig'), strip = $('pjg-strip'), tabs = $('pjg-tabs');
+  if (!box) return;
+  let pi = 0, ii = 0, opener = null, cur = null;
+  const src = (p, f, t) => 'assets/gallery/' + p.key + '/' + f + (t ? '-t' : '') + '.jpg';
+  const alt = (p, k) => (p.alt && p.alt[k]) || (p.name.charAt(0) + p.name.slice(1).toLowerCase() + ', photo ' + (k + 1));
+  P.forEach((p, k) => {
+    const b = document.createElement('button');
+    b.className = 'pjg-tab'; b.type = 'button'; b.setAttribute('role', 'tab'); b.textContent = p.tab;
+    b.onclick = () => project(k, 0);
+    tabs.appendChild(b);
+  });
+  function project(k, start) {
+    pi = k; const p = P[k];
+    $('pjg-n').textContent = String(k + 1).padStart(2, '0') + ' / ' + String(P.length).padStart(2, '0');
+    $('pjg-t').textContent = p.name;
+    [...tabs.children].forEach((b, j) => b.setAttribute('aria-selected', String(j === k)));
+    strip.innerHTML = '';
+    p.files.forEach((f, j) => {
+      const b = document.createElement('button');
+      b.className = 'pjg-th'; b.type = 'button'; b.setAttribute('aria-label', 'Photo ' + (j + 1) + ' of ' + p.files.length);
+      b.innerHTML = '<img src="' + src(p, f, true) + '" alt="" loading="lazy" decoding="async">';
+      b.onclick = () => show(j);
+      strip.appendChild(b);
+    });
+    fig.innerHTML = ''; cur = null;
+    show(start || 0, true);
+  }
+  function show(j, instant) {
+    const p = P[pi], n = p.files.length;
+    ii = (j + n) % n;
+    const im = new Image();
+    im.src = src(p, p.files[ii]); im.alt = alt(p, +p.files[ii] - 1); im.decoding = 'async'; im.draggable = false;
+    fig.appendChild(im);
+    const old = cur; cur = im;
+    const reveal = () => requestAnimationFrame(() => { im.classList.add('on'); if (old) { old.classList.remove('on'); setTimeout(() => old.remove(), 600); } });
+    if (im.complete) reveal(); else { im.onload = reveal; im.onerror = reveal; }
+    $('pjg-c').innerHTML = String(ii + 1).padStart(2, '0') + ' <i>/ ' + String(n).padStart(2, '0') + '</i>';
+    $('pjg-live').textContent = p.name + ', photo ' + (ii + 1) + ' of ' + n;
+    [...strip.children].forEach((b, k) => b.setAttribute('aria-current', String(k === ii)));
+    const th = strip.children[ii];
+    if (th) strip.scrollTo({ left: th.offsetLeft - strip.clientWidth / 2 + th.clientWidth / 2, behavior: instant ? 'auto' : 'smooth' });
+    [1, 2].forEach((k) => { const nx = new Image(); nx.src = src(p, p.files[(ii + k) % n]); });   // warm the next photos
+  }
+  function open(k) {
+    opener = document.activeElement;
+    project(k, 0);
+    box.classList.add('on'); box.setAttribute('aria-hidden', 'false');
+    document.documentElement.style.overflow = 'hidden';
+    setTimeout(() => $('pjg-x').focus({ preventScroll: true }), 60);
+  }
+  function close() {
+    box.classList.remove('on'); box.setAttribute('aria-hidden', 'true');
+    document.documentElement.style.overflow = '';
+    if (opener && opener.focus) opener.focus({ preventScroll: true });
+  }
+  const view = $('pj-view');
+  if (view) view.addEventListener('click', () => {
+    const k = +(document.getElementById('projects') || {}).dataset?.pj || 0;
+    open(Math.min(P.length - 1, Math.max(0, k)));
+  });
+  $('pjg-x').onclick = close;
+  ['pjg-prev', 'pjg-prev2'].forEach((id) => { const b = $(id); if (b) b.onclick = () => show(ii - 1); });
+  ['pjg-next', 'pjg-next2'].forEach((id) => { const b = $(id); if (b) b.onclick = () => show(ii + 1); });
+  document.addEventListener('keydown', (e) => {
+    if (!box.classList.contains('on')) return;
+    if (e.key === 'Escape') { e.preventDefault(); close(); }
+    else if (e.key === 'ArrowRight') { e.preventDefault(); show(ii + 1); }
+    else if (e.key === 'ArrowLeft') { e.preventDefault(); show(ii - 1); }
+    else if (e.key === 'Tab') {                                     // keep focus inside the gallery
+      const f = [...box.querySelectorAll('button')].filter((b) => b.offsetParent !== null);
+      const i = f.indexOf(document.activeElement);
+      if (e.shiftKey && i <= 0) { e.preventDefault(); f[f.length - 1].focus(); }
+      else if (!e.shiftKey && i === f.length - 1) { e.preventDefault(); f[0].focus(); }
+    }
+  });
+  let x0 = null, y0 = 0;                                             // swipe on touch screens
+  fig.addEventListener('pointerdown', (e) => { x0 = e.clientX; y0 = e.clientY; });
+  fig.addEventListener('pointerup', (e) => {
+    if (x0 === null) return;
+    const dx = e.clientX - x0, dy = e.clientY - y0; x0 = null;
+    if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) show(ii + (dx < 0 ? 1 : -1));
+  });
+  box.addEventListener('click', (e) => { if (e.target === box) close(); });
 })();
 </script>
 </body>
